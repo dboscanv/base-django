@@ -1,0 +1,531 @@
+/***************************************************************************************
+Theme Name: Koi
+Theme URI: http://firesoft.org
+Author: Firesoft, C.A.
+Author URI: http://firesoft.org
+Description: This theme was made for {{Khalid Hilmi Medical Center}}, by Firesoft, C.A.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Firesoft
+This theme was made specially for the enterprise, do not sell this, do not share it.
+Hope you like it and enjoy it, have fun.
+***************************************************************************************/
+
+//Colors & Variables
+
+$fish: #009a98;
+$flower: #9c27b0;
+$frog: #3a3a3a;
+$bird: #e7e5e6;
+
+// Mixins
+
+@mixin shadow($color) {
+  -webkit-box-shadow: 0 0 3px 3px $color;
+  box-shadow: 0 0 3px 3px $color;
+}
+
+@mixin rotate($grades) {
+  -moz-transform: rotate($grades);
+  -webkit-transform: rotate($grades);
+  -o-transform: rotate($grades);
+  -ms-transform: rotate($grades);
+  transform: rotate($grades);
+}
+
+@mixin transition($duration) {
+  -webkit-transition: all $duration ease;
+  -moz-transition: all $duration ease;
+  -ms-transition: all $duration ease;
+  -o-transition: all $duration ease;
+  transition: all $duration ease;
+}
+
+/*-------------------/ Fonts /-------------------*/
+
+@font-face {
+  font-family: 'Antic';
+  src: local('Antic'),
+  local('Antic Regular'),
+  local('Antic-Regular'),
+  url(fonts/Antic/Antic-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Days One';
+  src: local('Days One'),
+  local('DaysOne Regular'),
+  local('DaysOne-Regular'),
+  url(fonts/Days_One/DaysOne-Regular.ttf);
+}
+
+/*-------------------/ General Styles /-------------------*/
+
+body {
+  font-family: 'Antic', sans-serif;
+}
+
+/*-------------------/ Navbar /-------------------*/
+
+.navbar-fixed {
+  position: fixed;
+}
+
+nav {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: auto;
+  line-height: 56px;
+  @include transition(0.5s);
+
+  &.scrolled {
+    background-color: #fff;
+    @include transition(0.5s);
+  }
+
+  .nav-wrapper {
+    min-height: 135px;
+  }
+
+  .top-nav {
+    width: 100%;
+    height: 35px;
+    background: $fish;
+    position: absolute;
+
+    .social {
+      line-height: 35px;
+      padding-top: 2px;
+      height: 35px;
+
+      li {
+        background: #fff;
+        color: $fish;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        margin-right: 10px;
+        &:hover {
+          background: rgba(0, 0, 0, 0.45);
+        }
+
+        i {
+          font-size: 15px;
+          line-height: 30px;
+          margin: 0;
+          height: auto;
+        }
+      }
+
+    }
+
+    .shortcut {
+      float: right;
+      text-transform: uppercase;
+      height: 35px;
+      line-height: 35px;
+
+      a {
+        padding: 0;
+        display: inline-block;
+        &:last-child {
+          li {
+            border: 0;
+          }
+        }
+
+        li {
+          border-right: 2px solid rgba(0, 0, 0, 0.5);
+          padding: 0 15px;
+        }
+      }
+
+    }
+  }
+
+  .regular-nav {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    .brand-logo {
+      position: relative;
+      width: 20%;
+      height: 100px;
+      padding: 10px;
+      float: left;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .navi {
+      width: 80%;
+      text-align: center;
+
+      li {
+        float: none;
+        display: inline-block;
+      }
+
+      a {
+        color: #000;
+
+        &.active {
+          color: $flower;
+        }
+      }
+
+      &.language {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+
+        li {
+          float: right;
+        }
+
+        .flag {
+          height: 30px;
+          width: 30px;
+          margin: 5px;
+          background-size: cover;
+          background-position: center;
+          border-radius: 50%;
+        }
+      }
+    }
+
+  }
+}
+
+/*-------------------/ First /-------------------*/
+
+#first {
+  padding: 0;
+  .home-slider {
+    max-width: 100vw;
+    border-bottom: 4px solid $flower;
+    @include shadow(rgba(148, 148, 148, 0.8));
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .slick-slide {
+      max-height: 85vh;
+      overflow: hidden;
+      position: relative;
+
+      .slider-quote {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 350px;
+        height: auto;
+        background: rgba(156, 39, 176, 0.8);
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        @include shadow(rgba(148, 148, 148, 0.8));
+
+        h2 {
+          font-size: 230%;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 115%;
+        }
+      }
+    }
+  }
+}
+
+#first > .row {
+  margin-bottom: 0;
+}
+
+/*-------------------/ Second /-------------------*/
+
+#second {
+  padding-bottom: 3rem;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    color: $fish;
+    margin: 10px 0;
+  }
+
+  hr {
+    color: $flower;
+    border: 2px solid $flower;
+    width: 60%;
+    margin: 0 auto;
+  }
+  h4 {
+    text-align: center;
+    color: $flower;
+  }
+
+  .option-home {
+    border: 1px solid $fish;
+    position: relative;
+    padding: 15px;
+
+    .glyph {
+      text-align: center;
+      font-size: 8rem;
+      color: $flower;
+    }
+
+    .extract {
+      font-size: 130%;
+      text-align: justify;
+    }
+
+    .thumb {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .bottom-option {
+      margin-bottom: 100px;
+    }
+
+    .see-more {
+      position: absolute;
+      bottom: -30px;
+      width: 60px;
+      height: 60px;
+      background: $fish;
+      color: #fff;
+      left: calc(50% - 30px);
+      @include rotate(45deg);
+      @include transition(0.5s);
+
+      &:hover {
+        background: #007876;
+        @include transition(0.5s);
+      }
+
+      .see-more-inner {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 70%;
+        @include rotate(-45deg);
+
+      }
+    }
+  }
+}
+
+/*-------------------/ Sign In /-------------------*/
+
+#sign-in {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 9rem;
+
+  h2 {
+    font-family: 'Days One', sans-serif;
+    color: $fish;
+  }
+
+  .sign-in-form {
+    margin-bottom: 50px;
+    border: 2px solid $fish;
+    padding: 20px;
+    padding-bottom: 50px;
+    position: relative;
+
+    input:not([type]),
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="time"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="tel"], input[type="number"],
+    input[type="search"],
+    textarea.materialize-textarea {
+      border-bottom: 2px solid $flower;
+    }
+
+    [type="checkbox"] + label::before, [type="checkbox"]:not(.filled-in) + label::after {
+      border: 2px solid $flower;
+    }
+
+    [type="checkbox"]:checked + label::before {
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-right: 2px solid $fish;
+      border-bottom: 2px solid $fish;
+    }
+
+    input.validate:not([type]) + label,
+    input.validate[type="text"] + label,
+    input.validate[type="password"] + label,
+    input.validate[type="email"] + label,
+    input.validate[type="url"] + label,
+    input.validate[type="time"] + label,
+    input.validate[type="date"] + label,
+    input.validate[type="datetime"] + label,
+    input.validate[type="datetime-local"] + label,
+    input.validate[type="tel"] + label,
+    input.validate[type="number"] + label,
+    input.validate[type="search"] + label,
+    textarea.materialize-textarea.validate + label {
+      color: #000;
+    }
+
+    label {
+      color: #000000;
+    }
+
+    .submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: calc(50% - 40px);
+      bottom: -40px;
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      background: $fish;
+      @include shadow($frog);
+      @include rotate(45deg);
+
+      .submit-sign-in {
+        background: transparent;
+        @include shadow(transparent);
+        font-size: 70%;
+        width: 100px;
+        height: 100px;
+        @include rotate(-45deg);
+      }
+    }
+  }
+}
+
+/*-------------------/  /-------------------*/
+
+/*-------------------/  /-------------------*/
+
+.modal {
+  &#log-in {
+    color: #fff;
+    background-color: $fish;
+    width: 550px;
+    top: 15% !important;
+    overflow: visible;
+    .modal-content {
+      padding-top: 100px;
+      position: relative;
+
+      input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="time"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="tel"], input[type="number"], input[type="search"], textarea.materialize-textarea {
+        border-bottom: 2px solid #fff;
+      }
+
+      .input-field label {
+        color: #fff;
+        font-size: 1.2rem;
+      }
+
+      .log-in-btn {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: -35px;
+        @include shadow($frog);
+        @include rotate(45deg);
+
+        .btn {
+
+          background-color: $flower;
+          width: 150px;
+          height: 150px;
+          font-size: 70%;
+          @include rotate(-45deg);
+        }
+      }
+    }
+
+    .modal-thumb {
+      border: 10px solid #fff;
+      background-color: #fff;
+      position: absolute;
+      top: -85px;
+      left: calc(50% - 85px);
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .modal-footer {
+      background-color: $fish;
+      padding: 0;
+
+      .btn {
+        float: none;
+        background-color: $frog;
+        color: #fff;
+        font-family: 'Days One', sans-serif;
+        box-shadow: none;
+        margin: 0;
+        height: 57px;
+        border-radius: 0;
+        font-size: 1.4rem;
+        line-height: 57px;
+      }
+    }
+  }
+
+}
+
+/*-------------------/  /-------------------*/
+
+footer.page-footer {
+  margin-top: 0;
+  padding-top: 20px;
+  background-color: $frog;
+
+  h5 {
+    font-family: 'Days One', sans-serif;
+    font-size: 120%;
+
+    &.active {
+      border-bottom: 2px solid $flower;
+    }
+  }
+
+}
+
+

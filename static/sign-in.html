@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--=========================================
+    Item Name: Sign In | Khalid Hilmi Medical Center.
+	Version: 1
+	Author: Firesoft
+	Author URL: http://www.firesoft.org
+    =========================================|-->
+    <title>Khalid Hilmi Medical Center</title>
+
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khalid Hilmi Medical Center">
+
+    <!--Fuentes-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/social/flaticon.css">
+    <!--MaterializeCSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--SlickCSS-->
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <!--CSS Personalizado-->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+    <!--Responsive CSS-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--Cambios personales de CSS (Por si, en el futuro, deseas hacer alguno, sin romper/dañar/tocar/buscar entre los archivos originales)-->
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <div class="top-nav">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <ul class="social">
+                            <a href="#!">
+                                <li><i class="flaticon-instagram"></i></li>
+                            </a>
+                            <a href="#!">
+                                <li><i class="flaticon-youtube"></i></li>
+                            </a>
+                            <a href="#!">
+                                <li><i class="flaticon-facebook"></i></li>
+                            </a>
+                            <a href="#!">
+                                <li><i class="flaticon-linkedin"></i></li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <ul class="shortcut">
+                            <a href="#!">
+                                <li>Book Now</li>
+                            </a>
+                            <a href="#log-in">
+                                <li>Login</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="regular-nav">
+                <a href="#!" class="brand-logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <ul class="right hide-on-med-and-down navi language">
+                    <li><a href="#!">
+                        <div class="flag" style="background-image: url(img/rum.png)"></div>
+                    </a></li>
+                    <li><a href="#!">
+                        <div class="flag" style="background-image: url(img/uk.png)"></div>
+                    </a></li>
+                </ul>
+                <ul class="right hide-on-med-and-down navi">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pregnant-info.html">Pregnant Info</a></li>
+                    <li><a href="our-doctors.html">Our Doctors</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pregnant-info.html">Pregnant Info</a></li>
+                    <li><a href="our-doctors.html">Our Doctors</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</div>
+<div id="sign-in" class="section" style="background-image: url(img/sign-back.jpg)">
+    <div class="row">
+        <div class="col s12 m10 offset-m1">
+            <h2>Create New Account</h2>
+            <div class="col s12 m10 offset-m1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur consequatur cumque
+                    dignissimos expedita, explicabo facilis ipsum minus neque nihil officia omnis perspiciatis quae quam
+                    quisquam quod ratione sequi sunt.</p>
+                <div class="sign-in-form">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input id="first_name" type="text" class="validate">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="sign-password" type="password" class="validate">
+                                    <label for="sign-password">Password</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="re-password" type="password" class="validate">
+                                    <label for="re-password">Confirm Password</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <label>Health Conditions</label>
+                                    <div class="col s12 m6">
+                                        <p>
+                                            <input type="checkbox" id="hc-1"/>
+                                            <label for="hc-1">Lorem Impsum</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="hc-2"/>
+                                            <label for="hc-2">Lorem Impsum</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="hc-3"/>
+                                            <label for="hc-3">Lorem Impsum</label>
+                                        </p>
+                                    </div>
+                                    <div class="col s12 m6">
+                                        <p>
+                                            <input type="checkbox" id="hc-4"/>
+                                            <label for="hc-4">Lorem Impsum</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="hc-5"/>
+                                            <label for="hc-5">Lorem Impsum</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="hc-6"/>
+                                            <label for="hc-6">Lorem Impsum</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6">
+                                    <div class="input-field">
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="menstrual" type="text" class="validate datepicker">
+                                        <label for="menstrual">Last Menstrual Period</label>
+                                    </div>
+                                </div>
+
+                                <div class="submit">
+                                    <input type="submit" class="submit-sign-in btn" value="Create">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals Structures -->
+<div id="log-in" class="modal">
+    <div class="modal-content">
+        <div class="modal-thumb" style="background-image: url(img/iso.png)"></div>
+        <div class="row">
+            <form class="col s12 m10 offset-m1">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="user" type="text" class="validate">
+                        <label for="user">User</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="log-in-btn">
+                        <input type="submit" class="btn" value="Log In">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer center-align">
+        <a href="sign-in.html" class=" modal-action modal-close waves-effect waves-green btn">Create an Account</a>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <div class="row">
+        <div class="col l4 s12">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="col l8 center-align">
+            <div class="col s12 m2">
+                <ul>
+                    <h5 class="white-text active">Home</h5>
+                    <li><a class="grey-text text-lighten-3" href="#!">Our Services</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Appoinment Booking</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m2">
+                <ul>
+                    <h5 class="white-text">About Us</h5>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+                <ul>
+                    <h5 class="white-text">Services</h5>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m2">
+                <ul>
+                    <h5 class="white-text">Pregnant Info</h5>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m2">
+                <ul>
+                    <h5 class="white-text">Our Doctors</h5>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m2">
+                <ul>
+                    <h5 class="white-text">Gallery</h5>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<!-- Materialize JS -->
+<script src="js/materialize.min.js"></script>
+<!-- Slick JS -->
+<script src="js/slick/slick.min.js"></script>
+<!--Site Scripts-->
+<script src="js/site-scripts.js"></script>
+
+<script>
+    $('#log-in').modal('open');
+</script>
+</body>
+</html>
